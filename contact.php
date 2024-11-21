@@ -1,22 +1,19 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+	if (isset($_POST["submit"])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+		$from = 'Parax Contact Form'; 
+		$to = 'mdajharulislam327@gmail.com';
+		$subject = $_POST['subject']; 
+		
+		$body = "From: $name\n E-Mail: $email\n Subject: $subject\n Message:\n $message";
+	
 
-    // Set email parameters
-    $to = "mdajharulislam327@gmail.com"; // Replace with your email address
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+	mail($to, $subject, $body, $from) or die("Error!");
 
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "success";
-    } else {
-        echo "failed";
-    }
-}
+	header("location: thank-you.html");
+	
+	}
+	
 ?>
