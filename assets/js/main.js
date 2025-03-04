@@ -24,7 +24,7 @@
 	
 		/*PRELOADER JS*/ 
 			$('.spinner').fadeOut();
-			$('.preloader').delay(0).fadeOut('slow'); 
+			$('.preloader').delay(1).fadeOut('slow'); 
 		/*END PRELOADER JS*/
 
 		/*START MENU JS*/		
