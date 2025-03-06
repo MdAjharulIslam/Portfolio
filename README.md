@@ -5,8 +5,7 @@ Built with a clean UI and smooth animations to leave a lasting impression!
 
 ## Live
  https://mdajharulislam.github.io/Portfolio/
- <hr/>
- https://aquamarine-kitsune-107a6b.netlify.app
+
 
 ## 🔥 Features  
 ✅ **Beautiful & responsive UI** (Mobile-friendly 📱)  
